@@ -15,4 +15,4 @@ con <- jdbcConnection <- dbConnect(drv, 'jdbc:awsathena://athena.us-east-1.amazo
     password=Sys.getenv("ATHENA_PASSWORD"))
 dbListTables(con)
 dfelb=dbGetQuery(con, "SELECT * FROM bank_csv_data where age > 40 limit 50")
-head(dfelb,2)
+head(dfelb,20)
